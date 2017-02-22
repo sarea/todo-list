@@ -1,0 +1,39 @@
+.input-todo {
+	display: flex;
+	justify-content: center;
+	padding-top: 30px;
+}
+
+.badge {
+  padding: 1px 9px 2px;
+  font-size: 12.025px;
+  font-weight: bold;
+  white-space: nowrap;
+  color: #ffffff;
+  background-color: #999999;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;
+}
+.badge:hover {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+.delete {
+  background-color: #b94a48;
+}
+.delete:hover {
+  background-color: #953b39;
+}
+.edit {
+	background-color: #468847;
+}
+.edit:hover {
+	background-color: #356635;
+}
+.done{
+  text-decoration: line-through;
+  color: #000;
+}
+
