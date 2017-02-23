@@ -6,7 +6,7 @@
 		<p>Add, edit, delete and change priority for your todo-list <i class="fa fa-smile-o" aria-hidden="true"></i></p>
 	</div>
 	<div class="input-todo">
-		<div class="input-group col-md-6">
+		<div class="input-group">
 			<input type="text" class="form-control" #todo placeholder="What do you want to do?" (keyup.enter)="addTodo(todo)">
 			<div class="input-group-btn">
 				<button class="btn btn-warning" (click)="addTodo(todo)">
@@ -14,9 +14,8 @@
 				</button>
 			</div>
 		</div>
+		<div class="validation col-md-12" *ngIf="validation.value">{{validation.message}}</div>
 	</div>
-	<br><br>
-
 	<div class="list-group list-group-container">
 		<div class="list-group-item list-group-item-info" *ngFor="let todoItem of todoList; let i = index;">
 			<div class="col-md-9 col-xs-9">

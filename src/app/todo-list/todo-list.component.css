@@ -7,6 +7,13 @@
   padding-top: 30px;
 }
 
+.validation {
+  color: #DFC2C1;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+}
+
 .list-group-container {
   padding: 0 50px 80px 50px;
 }
@@ -15,7 +22,20 @@
 	display: flex;
 	justify-content: center;
 	padding-top: 25px;
-  padding-bottom: 30px;
+  padding-bottom: 50px;
+  width: 50%;
+  margin: auto;
+  display: block;
+  height: 120px;
+}
+
+.dropdown-menu {
+  min-width: 50px !important;
+  right: 0px;
+}
+.dropdown-item {
+  padding: 0px 10px;
+  text-align: center;
 }
 
 .todoItem {

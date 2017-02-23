@@ -9,14 +9,24 @@ export class TodoListComponent implements OnInit {
 
 	constructor() { }
 
+	validation = {
+		value: false,
+		message: 'You have to do something!!'
+	};
 	todo;
 	editOne;
 	todoList = [];
 	addTodo(todo) {
-		if(todo.value !== ''){
-			this.todoList.push({todo: todo.value, edit: false, done: false})
-			todo.value = '';
+		if(todo.value == ''){
+			this.validation.value = true;
+			setTimeout(()=> {
+			this.validation.value = false;
+			}, 2000);
+			return;
 		}
+		this.todoList.push({todo: todo.value, edit: false, done: false})
+		todo.value = '';
+		this.validation.value = false
 	}
 	editTodo(index, editOne) {
 		if(editOne.value !== ''){
