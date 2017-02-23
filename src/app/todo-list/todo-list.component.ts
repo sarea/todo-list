@@ -7,29 +7,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodoListComponent implements OnInit {
 
-  constructor() { }
+	constructor() { }
 
-  todo;
-  editOne;
-  todoList = [];
-  addTodo(todo) {
-    //if(this.todoList.indexOf(todo.value) === -1){
-    	this.todoList.push({todo: todo.value, edit: false, done: false})
-    	todo.value = '';
-   // }
-    console.log(todo.value);
-  }
-
-  editTodo(index, editOne) {
-    this.todoList[index].todo = editOne.value;
-    console.log(this.todoList[index])
-  }
-
-  deleteTodo(index) {
-  	this.todoList.splice(index, 1);
-  }
-
-  ngOnInit() {
-  }
+	todo;
+	editOne;
+	todoList = [];
+	addTodo(todo) {
+		if(todo.value !== ''){
+			this.todoList.push({todo: todo.value, edit: false, done: false})
+			todo.value = '';
+		}
+	}
+	editTodo(index, editOne) {
+		if(editOne.value !== ''){
+			this.todoList[index].todo = editOne.value;
+		}
+	}
+	deleteTodo(index) {
+		this.todoList.splice(index, 1);
+	}
+	changePriority(k,i) {
+		let temp = this.todoList[i];
+		this.todoList[i] = this.todoList[k];
+		this.todoList[k] = temp;
+	}
+	ngOnInit() {
+	}
 
 }

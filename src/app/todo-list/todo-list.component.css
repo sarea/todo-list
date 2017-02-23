@@ -1,15 +1,33 @@
+.container {
+  min-height: 100vh;
+  background-color: #3880FB;
+}
+
+.logo {
+  padding-top: 30px;
+}
+
+.list-group-container {
+  padding: 0 50px 80px 50px;
+}
+
 .input-todo {
 	display: flex;
 	justify-content: center;
-	padding-top: 30px;
+	padding-top: 25px;
+  padding-bottom: 30px;
+}
+
+.todoItem {
+  padding-left: 20px;
 }
 
 .badge {
-  padding: 1px 9px 2px;
+  padding: 15px;
   font-size: 12.025px;
   font-weight: bold;
   white-space: nowrap;
-  color: #ffffff;
+  color: #fff;
   background-color: #999999;
   -webkit-border-radius: 9px;
   -moz-border-radius: 9px;
@@ -20,20 +38,28 @@
   text-decoration: none;
   cursor: pointer;
 }
-.delete {
-  background-color: #b94a48;
+.delete-btn {
+  background-color: #F47C79;
 }
-.delete:hover {
-  background-color: #953b39;
+.delete-btn:hover {
+  background-color: #B97877;
 }
-.edit {
-	background-color: #468847;
+.edit-btn {
+	background-color: #70C1B3;
 }
-.edit:hover {
-	background-color: #356635;
+.edit-btn:hover {
+	background-color: #5C9E93;
+}
+.done-btn {
+  background-color: #247BA0;
+}
+.done-btn:hover {
+  background-color: #1E6583;
 }
 .done{
   text-decoration: line-through;
   color: #000;
 }
+
+
 
