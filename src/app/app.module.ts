@@ -6,11 +6,14 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
+import { DeleteModalComponent } from './delete-modal/delete-modal.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    TodoListComponent
+    TodoListComponent,
+    DeleteModalComponent
   ],
   imports: [
     BrowserModule,
